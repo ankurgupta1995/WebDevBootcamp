@@ -17,6 +17,10 @@ $("#addTodo").on("keypress", function(e) {
 		$(this).val("");
 		//create new li
 		if(newTodo)
-			$("#todoList").append("<li class=\"todoItem\"><span class=\"deleteButton\"> X </span>"+newTodo+"</li>");
+			$("#todoList").append("<li class=\"todoItem noselect\"><span class=\"deleteButton\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></span> "+newTodo+"</li>");
 	}
+});
+
+$("#openInput").on("click", function() {
+	$("#addTodo").fadeToggle();
 });

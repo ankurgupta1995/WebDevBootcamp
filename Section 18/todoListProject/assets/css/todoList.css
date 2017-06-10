@@ -1,8 +1,19 @@
-#container {
-	box-shadow: 0 0 3px rgba(0,0,0,0.3);
-	width: 360px;
-	background: #f7f7f7;
-	margin: 100px auto;
+body {
+	font-family: Roboto;
+	background: #C02425;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #F0CB35, #C02425);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #F0CB35, #C02425); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+	background: #FF7029;
+	color:white;
+	margin:0;
+	padding:10px 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: normal;
+	letter-spacing: 1px;
 }
 
 .done {
@@ -10,18 +21,73 @@
 	text-decoration: line-through;
 }
 
-ul {
+.fa-plus {
+	float: right;
+}
+
+.deleteButton {
+	background: #e74c3c;
+	height:40px;
+	margin-right:20px;
+	text-align: center;
+	color:white;
+	width: 0px;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+}
+
+.todoItem:hover .deleteButton {
+	width: 40px;
+	opacity: 1.0;
+}
+
+.todoItem {
+	background: white;
+	height:40px;
+	line-height: 40px;
+	color:#666;
+}
+
+.todoItem:nth-child(2n) {
+	background: #f7f7f7;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+#container {
+	box-shadow: 0 0 3px rgba(0,0,0,0.3);
+	width: 360px;
+	background: #f7f7f7;
+	margin: 100px auto;
+}
+
+#todoList {
 	list-style: none;
 	margin: 0;
 	padding:0;
 }
 
-h1 {
-	background: #2980b9;
-	color:white;
-	margin:0;
-	padding:10px 20px;
-	text-transform: uppercase;
-	font-size: 24px;
-	font-weight: normal;
+#addTodo {
+	font-size: 18px;
+	background: #f7f7f7;
+	width: 100%;
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;
+	color:#FF7029;
+	border: 3px solid rgba(0, 0, 0, 0);
+}
+
+#addTodo:focus {
+	background: white;
+	border: 3px solid #FF7029;
+	outline: none;
 }
